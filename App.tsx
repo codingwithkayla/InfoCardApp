@@ -9,8 +9,25 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text style={styles.header}>My Info Card</Text>
-        <Image source={require('.\assets\profile.png')} style={styles.image} />
+        <Text style={styles.header}>Welcome To My Profile</Text>
+        <Image source={require("./assets/image.png")} style={styles.image} />
+
+        <Button title="Show Greeting" onPress={() => setMessage(`Hello ${name}, enjoy ${hobby}`)} />
+          
+  <View style={styles.card}>
+  <Text style={styles.cardText}>Hey, {name}</Text>
+  <Text style={styles.cardText}>My favourite hobby is {"sleeping all day"}</Text>
+  </View>
+
+  
+<Image source={{ uri: "https://i.pinimg.com/736x/c1/b7/13/c1b713e73deafe516bec97934a17581b.jpg" }} style={styles.onlineImage} />
+
+  <Text style={styles.extra}>I love noodles</Text>
+  <Text style={styles.extra}>I also love my cat Layla</Text>
+  <Text style={styles.extra}>MAST is a hectic module</Text>
+  <Text style={styles.extra}>I'm running out of ideas</Text>
+  <Text style={styles.extra}>Goodbye.</Text>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -19,7 +36,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFB7CE',
     padding: 20
   },
   header: {
@@ -30,7 +47,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#ffffff',
     padding: 10,
     marginVertical: 10,
     borderRadius: 5
@@ -38,7 +55,7 @@ const styles = StyleSheet.create({
   card: {
     marginTop: 20,
     padding: 20,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#ffffff',
     borderRadius: 10
   },
   cardText: {
